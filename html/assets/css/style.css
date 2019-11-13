@@ -1,0 +1,50 @@
+* {
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 400, 600, 700, 900;
+  outline: none;
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.66rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 2.13rem;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+h5 {
+  font-size: 1.33rem;
+  font-weight: bold;
+}
+h6 {
+  font-weight: bold;
+  font-size: 1.067rem;
+}
+.text-white {
+  color: #f8f8f8;
+}
+.text-anchor {
+  color: #2b8dff;
+}
+.black {
+  color: #000000;
+}
+.accent {
+  color: #00ced1;
+}
+
+.btn-accent {
+  color: #00ced1;
+  padding: 0 1rem;
+  border-radius: 40px;
+  height: 48px;
+  border: 1px solid #00ced1b2;
+  font-size: 1rem;
+}
