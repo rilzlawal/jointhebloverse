@@ -3,6 +3,9 @@
   font-weight: 400, 600, 700, 900 !important;
   outline: none !important;
 }
+html {
+  font-size: 15px;
+}
 body {
   background: #000000 !important;
   padding: 0 !important;
@@ -32,6 +35,30 @@ h6 {
   font-weight: bold !important;
   font-size: 1.067rem !important;
 }
+
+a {
+  font-size: 1rem !important;
+  color: #ffffffb3 !important;
+  display: inline-block;
+  text-decoration: none !important;
+}
+a::after {
+  content: "";
+  display: block;
+  margin-top: 3px;
+  width: 0;
+  height: 2px;
+  background: rgb(189, 183, 183);
+  transition: width 0.3s;
+  text-decoration: none;
+}
+a:hover {
+  color: white !important;
+}
+a:hover::after {
+  width: 100%;
+  color: white !important;
+}
 .text-white {
   color: #f8f8f8;
 }
@@ -44,7 +71,9 @@ h6 {
 .accent {
   color: #00ced1;
 }
-
+.opacity {
+  opacity: 0.8;
+}
 .btn-accent {
   color: #00ced1;
   padding: 0 1rem;
@@ -52,12 +81,94 @@ h6 {
   height: 48px;
   border: 1px solid #00ced1b2;
   font-size: 1rem;
+  background: transparent !important;
 }
-.btn-grey {
-  color: #ffffffb3;
+.btn-light {
+  color: #ffffffb3 !important;
   padding: 0 1rem;
   border-radius: 40px;
-  height: 48px;
+  height: 40px;
   border: 1px solid #ffffffb3;
   font-size: 1rem;
+  background: transparent !important;
+}
+.btn-light:hover {
+  color: white !important;
+}
+.logo-letter {
+  height: 16px;
+  margin-left: 1rem;
+}
+.main-logo {
+  margin-left: 2rem;
+}
+.nav-area {
+  height: 10vh;
+  position: sticky;
+  padding-top: 1rem;
+  top: 0;
+}
+.links-area a:nth-child(2) {
+  margin: 0 18px;
+}
+.links-area button {
+  margin-right: 2rem;
+}
+.hero-body {
+  height: 90vh;
+  width: 80%;
+  margin: auto;
+}
+.text-point {
+  display: flex;
+  align-items: baseline;
+}
+.text-point p {
+  padding-left: 16px;
+  color: #f8f8f8;
+  opacity: 0.8;
+}
+.first {
+  position: relative;
+}
+.dive-deeper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 75vh;
+  color: #f8f8f8;
+  opacity: 0.8;
+  font-size: 14px;
+  width: 100%;
+}
+.line {
+  border: 0.5px solid #f8f8f8;
+  opacity: 0.8;
+  height: 50px;
+}
+.central {
+  width: 80%;
+  margin: auto;
+}
+.the-problem {
+  margin-top: 50px;
+}
+.problem-image {
+  opacity: 0.5;
+}
+.the-problem p {
+  color: #f8f8f8;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+.the-solution p {
+  color: #f8f8f8;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+.products {
+  width: 55%;
 }
