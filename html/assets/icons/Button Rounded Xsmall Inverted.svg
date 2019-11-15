@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Button_Rounded_Xsmall_Inverted" data-name="Button Rounded Xsmall Inverted" transform="translate(0 0)">
+    <g id="Ellipse_563" data-name="Ellipse 563" transform="translate(0 0)" fill="rgba(255,255,255,0)" stroke="#fff" stroke-width="1">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="11.5" fill="none"/>
+    </g>
+    <path id="Icon" d="M6.061,101,9.266,97.8l.661-.661a.25.25,0,0,0,0-.353l-.707-.707a.25.25,0,0,0-.353,0L5,99.939,1.134,96.073a.25.25,0,0,0-.353,0l-.708.707a.25.25,0,0,0,0,.353L3.939,101,.073,104.866a.25.25,0,0,0,0,.353l.707.707a.25.25,0,0,0,.353,0L5,102.061l3.205,3.205.661.661a.25.25,0,0,0,.353,0l.707-.707a.25.25,0,0,0,0-.353Z" transform="translate(7 -89)" fill="#fff"/>
+  </g>
+</svg>
