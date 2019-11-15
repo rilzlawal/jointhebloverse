@@ -446,10 +446,8 @@ footer .social .social-links::after {
        ========================================================================== */
 
 #requestDemo .modal-dialog {
-    /* min-width: ; */
     max-width: 100% !important;
     width: 1153px;
-    /* background: transparent; */
 }
 
 #requestDemo .modal-content {
@@ -530,62 +528,6 @@ footer .social .social-links::after {
     height: 40px;
     border-radius: 20px;
     margin: 15px auto;
-}
-
-
-/*
-==========================================================================
-MODAL
-==========================================================================
-*/
-
-#requestDemo .modal-dialog {
-    max-width: 100% !important;
-    width: 1153px;
-}
-
-#requestDemo .modal-content {
-    background-color: transparent;
-}
-
-#requestDemo #request-form-wrapper {
-    background-color: #000000;
-    width: 1153px;
-    height: 80vh;
-    margin: 0 auto;
-    border-radius: 25px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-radius: 25px;
-}
-
-#requestDemo #request-form-image-container {
-    height: 100%;
-    width: 60%;
-    background-color: #000000;
-    border-radius: 25px;
-    opacity: 1;
-}
-
-#requestDemo #request-form-image {
-    background-image: url("../icons/DeepView_DiverHead_SVG.svg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: -1340px -780px;
-    background-size: 2800px 2400px;
-    height: 100%;
-    width: 100%;
-    opacity: 0.25;
-    border-radius: 25px;
-    background-color: #000000;
-}
-
-#requestDemo #request-form {
-    height: 100%;
-    width: 40%;
-    background-color: #00ced1;
-    border-radius: 25px;
 }
 
 .modal-backdrop.show {
