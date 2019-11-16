@@ -1,6 +1,6 @@
 /* ==========================================================================
-     ABOUT US
-     ========================================================================== */
+    ABOUT US
+    ========================================================================== */
 
 #about-us {
     text-align: center;
@@ -16,7 +16,7 @@
 #about-us #divers-story .details p {
     font: Regular 15px/25px PT Sans Pro;
     letter-spacing: 1.2px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.8;
 }
 
@@ -31,14 +31,14 @@
 #about-us #be-our-buddies .details p {
     font: Regular 15px/25px PT Sans Pro;
     letter-spacing: 1.2px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.8;
 }
 
 
 /* ==========================================================================
-     MEDIA QUERIES
-     ========================================================================== */
+         MEDIA QUERIES
+         ========================================================================== */
 
 @media only screen and (min-width: 320px) {
     #about-us #divers-story .details,

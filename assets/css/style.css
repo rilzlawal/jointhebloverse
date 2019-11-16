@@ -99,6 +99,28 @@ a:hover::after {
     border: 1px solid #00ced1b2;
     font-size: 1rem;
     background: transparent !important;
+    position: relative;
+}
+
+.btn-accent::after {
+    content: "\f30b";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: 20px;
+    transition: 0.3s;
+}
+
+.btn-accent:hover {
+    padding-right: 30px;
+    padding-left: 9px;
+}
+
+.btn-accent:hover:after {
+    opacity: 1;
+    right: 8px;
 }
 
 .btn-light {
@@ -129,6 +151,9 @@ a:hover::after {
     position: sticky;
     padding-top: 1rem;
     top: 0;
+    background: black;
+    padding-bottom: 10px;
+    z-index: 10;
 }
 
 .links-area a:nth-child(2) {
@@ -190,6 +215,7 @@ a:hover::after {
 
 .problem-image {
     opacity: 0.5;
+    flex-grow: 1;
 }
 
 .the-problem p {
@@ -208,92 +234,310 @@ a:hover::after {
     width: 55%;
 }
 
-footer a {
-    margin-left: 16px;
-    text-align: left;
-    text-decoration: underline;
-    font: Regular 13px/26px PT Sans Pro;
-    letter-spacing: 1.04px;
-    color: #bbb !important;
-    opacity: .45;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
+
+.box {
+    width: 230px;
+}
+
+.box-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box p {
+    padding: 0 2.5rem;
+}
+
+.box-area img {
+    padding-left: 1.1rem;
+}
+
+.sixty {
+    width: 400px;
+    height: 320px;
+    padding: 1.5rem;
+    opacity: 0.8;
+    position: relative;
+    background: #121212;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.sixty h5 {
+    letter-spacing: 1.2px;
+    line-height: 1.8rem;
+}
+
+.image-back {
+    position: absolute;
+    width: 900px;
+    right: -26vw;
+    top: -28vh;
+    opacity: 0.05;
+}
+
+.sixty-five {
+    width: 400px;
+    padding: 1.5rem;
+    opacity: 0.3;
+    position: relative;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.owl-item.active.center>div {
+    width: 400px;
+    padding: 1.5rem;
+    opacity: 0.8;
+    position: relative;
+    background: #121212;
+    overflow: hidden;
+    z-index: 100;
+    height: 450px;
+}
+
+
+/* .owl-item.active > div {
+  border: 1px solid yellow;
+}
+
+.owl-item .cloned {
+  border: 1px solid green;
+} */
+
+
+/* .owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+} */
+
+.report {
+    margin-top: 130px;
+}
+
+.image-cont {
+    margin-top: -80px;
+}
+
+.reporting {
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+}
+
+.problem-text {
+    width: 545px;
+}
+
+.footer-text {
+    line-height: 2.8rem;
+}
+
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+}
+
+.owl-carousel .owl-prev {
+    position: absolute;
+    background: none;
+    left: -40px;
+    top: 40%;
+}
+
+.owl-carousel .owl-next {
+    position: absolute;
+    background: none;
+    right: -40px;
+    top: 40%;
+}
+
+.owl-carousel .owl-next:hover,
+.owl-carousel .owl-prev:hover {
+    background: none !important;
+}
+
+.owl-carousel .owl-prev span {
+    font-size: 80px;
+    font-weight: 100;
+}
+
+.owl-carousel .owl-next span {
+    font-size: 80px;
+    font-weight: 100;
+}
+
+
+/* ==========================================================================
+    FOOTER
+    ========================================================================== */
 
 footer .deepview {
     text-align: left;
     font: Regular 13px/42px PT Sans Pro;
     letter-spacing: 1.04px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 1;
 }
 
-footer a:hover {
-    text-decoration: underline;
+footer a.terms {
+    margin-left: 16px;
+    text-align: left;
+    text-decoration: underline !important;
+    font: Regular 13px/26px PT Sans Pro;
+    letter-spacing: 1.04px;
     color: #bbb !important;
+    opacity: 0.45;
+}
+
+footer a.terms::after {
+    content: "";
+    display: block;
+    margin-top: 3px;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s;
+    text-decoration: none;
+}
+
+footer a.terms:hover {
+    text-decoration: underline;
+    color: #fff !important;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.4;
+}
+
+footer .social .social-links {
+    text-decoration: none !important;
+}
+
+footer .social .social-links::after {
+    content: "";
+    display: block;
+    margin-top: 3px;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s;
+    text-decoration: none;
 }
 
 
 /* ==========================================================================
-     ABOUT US
-     ========================================================================== */
-
-
-/* #about-us {
-    text-align: center;
-    padding: 120px 0 0;
-    margin: 0;
-    width: 100%;
-}
-
-#about-us #divers-story .details {
-    text-align: left;
-}
-
-#about-us #divers-story .details p {
-    font: Regular 15px/25px PT Sans Pro;
-    letter-spacing: 1.2px;
-    color: #FFFFFF;
-    opacity: 0.8;
-}
-
-#about-us #be-our-buddies {
-    margin: 150px auto 0;
-}
-
-#about-us #be-our-buddies .details {
-    text-align: left;
-}
-
-#about-us #be-our-buddies .details p {
-    font: Regular 15px/25px PT Sans Pro;
-    letter-spacing: 1.2px;
-    color: #FFFFFF;
-    opacity: 0.8;
-} */
-
-
-/* ==========================================================================
-       MEDIA QUERIES
+       MODAL
        ========================================================================== */
 
-
-/* @media only screen and (min-width: 320px) {
-    #about-us #divers-story .details,
-    #about-us #be-our-buddies .details {
-        width: 100%;
-    }
-    #about-us #be-our-buddies {
-        margin: 80px auto 0;
-    }
+#requestDemo .modal-dialog {
+    max-width: 100% !important;
+    width: 1153px;
 }
 
-@media only screen and (min-width: 768px) {}
+#requestDemo .modal-content {
+    background-color: transparent;
+}
 
-@media only screen and (min-width: 1024px) {
-    #about-us #divers-story .details,
-    #about-us #be-our-buddies .details {
-        width: 50% !important;
-    }
-    #about-us #be-our-buddies {
-        margin: 150px auto 0;
-    }
-} */
+#requestDemo #request-form-wrapper {
+    background-color: #000000;
+    width: 1153px;
+    height: 80vh;
+    margin: 0 auto;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 25px;
+}
+
+#requestDemo #request-form-image-container {
+    height: 100%;
+    width: 60%;
+    background-color: #000000;
+    border-radius: 25px;
+}
+
+#requestDemo #request-form-image {
+    background-image: url("../icons/DeepView_DiverHead_SVG.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: -1340px -810px;
+    background-size: 2800px 2400px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.25;
+    border-radius: 25px;
+}
+
+#requestDemo #request-form {
+    height: 100%;
+    width: 40%;
+    background-color: #00ced1;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 80px 0;
+}
+
+#requestDemo form {
+    margin: 40px 0 0;
+}
+
+#requestDemo form .form-group {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+#requestDemo form .form-group input {
+    background: transparent;
+    border: none;
+}
+
+#requestDemo form .form-group input::placeholder {
+    color: #000 !important;
+}
+
+#requestDemo form .form-group input:focus {
+    outline: none;
+}
+
+#requestDemo form button {
+    border: 1px solid #000000;
+    background: transparent;
+    color: #000;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin: 15px auto;
+}
+
+.modal-backdrop.show {
+    opacity: 0.85 !important;
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    border: none;
+}
