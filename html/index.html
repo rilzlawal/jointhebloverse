@@ -26,24 +26,112 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="d-flex justify-content-between nav-area align-items-center  ">
+    <div style="position: sticky; top: 0px;">
+      <img
+        style="position: absolute; top: 2vh;"
+        src="./assets/icons/IconLogo.svg"
+        alt=""
+        class="main-logo"
+        height="48px"
+        id="main-logo"
+      />
+
+      <button
+        style="position: absolute; top: 2vh; right:3vw;"
+        id="button"
+        class="btn-light  "
+      >
+        <a
+          class="mail"
+          target="_blank"
+          href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+          target="_top"
+          >Contact Us</a
+        >
+      </button>
+    </div>
+    <nav
+      id="navbar"
+      class="d-flex justify-content-between align-items-center nav-area fit mx-auto width"
+    >
+      <img
+        style="left: -5.1vw;  position: relative;"
+        id="letter"
+        src="./assets/icons/logo-letter.png"
+        class="logo-letter"
+        alt=""
+      />
+      <a
+        style="right: .3vw;  position: relative;"
+        id="about"
+        class="abt pr-3"
+        href="about.html"
+        >About Us</a
+      >
+    </nav>
+    <!-- <div class="d-flex nav-area align-items-center justify-content-between ">
+      <img
+        src="./assets/icons/IconLogo.svg"
+        alt=""
+        class="main-logo"
+        height="48px"
+        id="main-logo"
+      />
+      <nav
+        id="navbar"
+        class="d-flex bg-danger justify-content-between align-items-center nav-area fit "
+      >
+        <img
+          id="letter"
+          src="./assets/icons/logo-letter.png"
+          class="logo-letter"
+          alt=""
+        />
+        <a id="about" class="abt pr-3" href="about.html">About Us</a>
+      </nav>
+      <button id="button" class="btn-light mr-5 ">
+        <a
+          class="mail"
+          target="_blank"
+          href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+          target="_top"
+          >Contact Us</a
+        >
+      </button>
+    </div> -->
+    <!-- <nav
+      id="navbar"
+      class="d-flex justify-content-between nav-area align-items-center  "
+    >
       <div class="icon-area d-flex align-items-center ">
         <img
           src="./assets/icons/IconLogo.svg"
           alt=""
           class="main-logo"
           height="48px"
+          id="main-logo"
         />
-        <img src="./assets/icons/logo-letter.png" class="logo-letter" alt="" />
+        <img
+          id="letter"
+          src="./assets/icons/logo-letter.png"
+          class="logo-letter"
+          alt=""
+        />
       </div>
       <div class="links-area">
-        <a href="about.html">About Us</a>
-        <a href="">DeepView News</a>
-        <button class="btn-light ">
-          Contact Us
+        <a id="about" class="abt pr-3" href="about.html">About Us</a>
+    
+        <button id="button" class="btn-light ">
+          <a
+            class="mail"
+            target="_blank"
+            href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+            target="_top"
+            >Contact Us</a
+          >
         </button>
       </div>
-    </nav>
+    </nav> -->
     <main class="first">
       <main class="hero-body d-flex">
         <div
@@ -162,7 +250,7 @@
         </p>
       </div>
       <div class="d-flex justify-content-between mt-5 ">
-        <div class="d-flex box flex-column ">
+        <div class="d-flex box flex-column box-container ">
           <div class=" box-area">
             <img
               height="100px"
@@ -170,13 +258,19 @@
               alt=""
             />
           </div>
-          <p class=" text-white opacity ">
+          <p class=" text-white pt-3 opacity ">
             Real-Time Alerts For Fast Response to
             <span class="accent opacity"> Data Leaks</span> .
           </p>
-          <p class="accent opacity">Read more</p>
+          <p
+            data-toggle="modal"
+            data-target="#imageguard"
+            class="accent read opacity"
+          >
+            Read more
+          </p>
         </div>
-        <div class="d-flex box flex-column">
+        <div class="d-flex box flex-column box-container">
           <div class="box-area">
             <img
               height="100px"
@@ -185,13 +279,19 @@
             />
           </div>
 
-          <p class=" text-white opacity ">
+          <p class=" text-white pt-3 opacity ">
             <span class="accent opacity"> Real-Time Alerts</span> For Fast
             Response to Data Leaks.
           </p>
-          <p class="accent opacity">Read more</p>
+          <p
+            data-toggle="modal"
+            data-target="#chartguard"
+            class="accent read opacity"
+          >
+            Read more
+          </p>
         </div>
-        <div class="d-flex box flex-column">
+        <div class="d-flex box flex-column box-container">
           <div class="box-area">
             <img
               height="100px"
@@ -200,15 +300,21 @@
             />
           </div>
 
-          <p class="text-white opacity">
+          <p class="text-white pt-3 opacity">
             <span class="accent opacity">
               Archiving And Record Keeping
             </span>
             For Cooperate Social Media.
           </p>
-          <p class="accent opacity">Read more</p>
+          <p
+            data-toggle="modal"
+            data-target="#corpguard"
+            class="accent read opacity"
+          >
+            Read more
+          </p>
         </div>
-        <div class="d-flex box flex-column">
+        <div class="d-flex box flex-column box-container">
           <div class="box-area">
             <img
               height="100px"
@@ -217,11 +323,18 @@
             />
           </div>
 
-          <p class="text-white opacity">
+          <p class="text-white pt-3 opacity">
             Promoting Good Practices And
             <span class="opacity accent">Social Media Policy</span> .
           </p>
-          <p class="accent opacity">Read more</p>
+
+          <p
+            data-toggle="modal"
+            data-target="#trainingguard"
+            class="accent read opacity"
+          >
+            Read more
+          </p>
         </div>
       </div>
       <div class="report d-flex flex-column align-items-center">
@@ -273,25 +386,7 @@
               including social media and loss of devices
             </p>
           </div>
-          <!-- <div></div> -->
-          <!-- <div class="sixty-five">
-            <div class="image-back">
-              <img
-                class="image-dive"
-                src="./assets/icons/DeepView_DiverHead_SVG.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="accent">60%</h1>
-            <h5 class="text-white pt-2">
-              of information to hack a company can be found on instagram
-            </h5>
-            <p class="text-white opacity pt-3">
-              According to Rachel Tobac, renowned social engineer, 60% of the
-              information needed to hack a company is found on instagram as
-              employees inadvertently share confidential data
-            </p>
-          </div> -->
+
           <div class="sixty-five">
             <div class="image-back">
               <img
@@ -384,6 +479,195 @@
         </div>
       </div>
     </footer>
+    <!-- imageguard modal -->
+    <div
+      class="modal fade"
+      id="imageguard"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <button data-dismiss="modal" class="modal-close">
+        <img src="./assets/icons/Button Rounded Xsmall Inverted.svg" alt="" />
+      </button>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content d-flex ">
+          <div class="m-0 d-flex flex-column modal-width">
+            <img
+              class="img-fluid m-image"
+              src="./assets/icons/DV_textEffect_ImageGuard.png"
+              alt=""
+            />
+          </div>
+          <div class="p-5 box-contain ">
+            <h4 class="opacity">THE PROBLEM</h4>
+            <p class="opacity">
+              Reputational and security risk via photos and videos. Inadvertent
+              photo data leaks via employees’ social media, particularly photos
+              and videos. These leaks include passwords on Post-it notes,
+              programs and client data on computer screens
+            </p>
+            <h4 class="opacity pt-4">OUR SOLUTION</h4>
+            <p class="opacity">
+              Real-time alerts for fast response to data leaks via video, text
+              and photo. Allowing you to remove the data leaks and show
+              regulators ‘best-practice’ data management
+            </p>
+            <h4 class="opacity pt-4">REGULATIONS MET</h4>
+            <p class="new-blue">Gramm-Leach-Bliley Act (US) 1999 , CONC 3.10</p>
+            <p class="pt-4">
+              To get more info click the button below to download a one page
+              document.
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-4">
+              <button class="btn-accent">
+                Download Link
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- chartguard modal -->
+    <div
+      class="modal fade"
+      id="chartguard"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <button data-dismiss="modal" class="modal-close">
+        <img src="./assets/icons/Button Rounded Xsmall Inverted.svg" alt="" />
+      </button>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content d-flex ">
+          <div class="m-0 d-flex flex-column modal-width">
+            <img
+              class="img-fluid m-image"
+              src="./assets/icons/DV_textEffect_ChatGuard.png"
+              alt=""
+            />
+          </div>
+          <div class="p-5 box-contain ">
+            <h4 class="opacity">THE PROBLEM</h4>
+            <p class="opacity">
+              Corporate social media channels being screen shot and sent to
+              compliance for record keeping across LinkedIn, Facebook and
+              Twitter.
+            </p>
+            <h4 class="opacity pt-4">OUR SOLUTION</h4>
+            <p class="opacity">
+              Real-time alerts for fast response to data leaks via video, text
+              and photo. Allowing you to remove the data leaks and show
+              regulators ‘best-practice’ data management
+            </p>
+            <h4 class="opacity pt-4">REGULATIONS MET</h4>
+            <p class="new-blue">GFINRA Rule 4510 NASD Rule 2210 (b)</p>
+            <p class="pt-4">
+              To get more info click the button below to download a one page
+              document.
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-4">
+              <button class="btn-accent">
+                Download Link
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- corpguard modal -->
+    <div
+      class="modal fade"
+      id="corpguard"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <button data-dismiss="modal" class="modal-close">
+        <img src="./assets/icons/Button Rounded Xsmall Inverted.svg" alt="" />
+      </button>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content d-flex ">
+          <div class="m-0 d-flex flex-column modal-width">
+            <img
+              class="img-fluid m-image"
+              src="./assets/icons/DV_textEffect_CorpGuard.png"
+              alt=""
+            />
+          </div>
+          <div class="p-5 box-contain ">
+            <h4 class="opacity">THE PROBLEM</h4>
+            <p class="opacity">
+              Corporate social media channels being screen shot and sent to
+              compliance for record keeping across LinkedIn, Facebook and
+              Twitter.
+            </p>
+            <h4 class="opacity pt-4">OUR SOLUTION</h4>
+            <p class="opacity">
+              Archiving and record keeping for corporate social media channels
+              in line with REGULATIONS MET.
+            </p>
+            <h4 class="opacity pt-4">REGULATIONS MET</h4>
+            <p class="new-blue">FINRA Rule 4510 NASD Rule 2210 (b)</p>
+            <p class="pt-4">
+              To get more info click the button below to download a one page
+              document.
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-4">
+              <button class="btn-accent">
+                Download Link
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- trainingguard modal -->
+    <div
+      class="modal fade"
+      id="trainingguard"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <button data-dismiss="modal" class="modal-close">
+        <img src="./assets/icons/Button Rounded Xsmall Inverted.svg" alt="" />
+      </button>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content d-flex ">
+          <div class="m-0 d-flex flex-column modal-width">
+            <img
+              class="img-fluid m-image"
+              src="./assets/icons/DV_textEffect_TrainingGuard.png"
+              alt=""
+            />
+          </div>
+          <div class="p-5 box-contain ">
+            <h4 class="opacity">THE PROBLEM</h4>
+            <p class="opacity">
+              Human Error.
+            </p>
+            <h4 class="opacity pt-4">OUR SOLUTION</h4>
+            <p class="opacity">
+              Short and fun animations to assist with implementing Social Media
+              policy and promoting good practice.
+            </p>
+
+            <div class="d-flex justify-content-center align-items-center mt-4">
+              <button class="btn-accent">
+                Download Link
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- request-modal -->
     <div
       class="modal fade"
       id="requestDemo"
@@ -401,7 +685,65 @@
             <div id="request-form-image-container">
               <div class="opacity" id="request-form-image"></div>
             </div>
-            <div id="request-form"></div>
+            <div id="request-form">
+              <h5 class="black">
+                Please prevent use with some information
+              </h5>
+              <!-- Form  -->
+              <form>
+                <div class="form-group">
+                  <!-- <label for="exampleInputEmail1">Email address</label> -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="demoFullName"
+                    aria-describedby="emailHelp"
+                    placeholder="Full Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <!-- <label for="exampleInputEmail1">Email address</label> -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="demoCompany"
+                    aria-describedby="emailHelp"
+                    placeholder="Company"
+                  />
+                </div>
+                <div class="form-group">
+                  <!-- <label for="exampleInputEmail1">Email address</label> -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="demoPosition"
+                    aria-describedby="emailHelp"
+                    placeholder="Position"
+                  />
+                </div>
+                <div class="form-group">
+                  <!-- <label for="exampleInputEmail1">Email address</label> -->
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="demoEmail"
+                    aria-describedby="emailHelp"
+                    placeholder="Work E-Mail"
+                  />
+                </div>
+                <div class="form-group">
+                  <!-- <label for="exampleInputEmail1">Email address</label> -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="demoInfo"
+                    aria-describedby="emailHelp"
+                    placeholder="Select Product of Interest"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

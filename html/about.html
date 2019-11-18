@@ -17,7 +17,7 @@
   </head>
   <body>
     <nav class="d-flex justify-content-between nav-area align-items-center  ">
-      <div class="icon-area d-flex align-items-center ">
+      <a href="index.html" class="icon-area d-flex align-items-center ">
         <img
           src="./assets/icons/IconLogo.svg"
           alt=""
@@ -25,12 +25,18 @@
           height="48px"
         />
         <img src="./assets/icons/logo-letter.png" class="logo-letter" alt="" />
-      </div>
+      </a>
       <div class="links-area">
-        <a href="index.html">Home</a>
-        <a href="">DeepView News</a>
+        <a class="abt pr-3">About Us</a>
+        <!-- <a href="">DeepView News</a> -->
         <button class="btn-light ">
-          Contact Us
+          <a
+            class="mail"
+            target="_blank"
+            href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+            target="_top"
+            >Contact Us</a
+          >
         </button>
       </div>
     </nav>
