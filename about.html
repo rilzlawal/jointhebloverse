@@ -16,20 +16,43 @@
     <title>About</title>
   </head>
   <body>
-    <nav class="d-flex justify-content-between nav-area align-items-center  ">
-      <a href="index.html" class="icon-area d-flex align-items-center ">
-        <img
-          src="./assets/icons/IconLogo.svg"
-          alt=""
-          class="main-logo"
-          height="48px"
-        />
-        <img src="./assets/icons/logo-letter.png" class="logo-letter" alt="" />
-      </a>
-      <div class="links-area">
-        <a class="abt pr-3">About Us</a>
-        <!-- <a href="">DeepView News</a> -->
-        <button class="btn-light ">
+    <div
+      style="height: auto; position: sticky; top: 0; z-index: 10; background: black;"
+      class="w-100  d-flex justify-content-between align-items-center wrap "
+    >
+
+      <div class="d-flex align-items-center">
+          <a href="index.html">
+
+              <img
+              src="./assets/icons/IconLogo.svg"
+              alt=""
+              height="48px"
+              id="main-logo"
+            />
+            <div style="overflow: hidden; background: black;">
+              <img
+                id="letter"
+                src="./assets/icons/logo-letter.png"
+                class="logo-letter slide-in-top "
+                alt=""
+              />
+
+          </a>
+
+    
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <div style="overflow: hidden; background: black;">
+            <a id="about" class="abt mr-3 slide-in-top" href="index.html"
+            >Home</a
+          >
+          <a id="about" class="abt mr-3 slide-in-top" href="about.html"
+            >About Us</a
+          >
+        </div>
+        <button id="button" class="btn-light  ">
           <a
             class="mail"
             target="_blank"
@@ -39,7 +62,7 @@
           >
         </button>
       </div>
-    </nav>
+    </div>
     <!-- About Section -->
     <section id="about-us" class="container-fluid flex-column">
       <!-- Title -->
