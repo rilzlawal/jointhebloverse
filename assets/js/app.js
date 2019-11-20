@@ -18,9 +18,21 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("about").style.display = "block";
+    document.getElementById("container").style.background = "black";
+    logo.style.transform = " translateX(0px)";
+    button.style.transform = " translateX(0px)";
   } else {
-    document.getElementById("navbar").style.top = "-90px";
+    document.getElementById("letter").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("container").style.background = "none";
+
+    logo.style.transform = "translate(-20px,-20px)";
+    logo.style.transitionDuration = ".5s";
+    button.style.transform = "translate(20px,-20px)";
+    button.style.transitionDuration = ".5s";
   }
   prevScrollpos = currentScrollPos;
 };

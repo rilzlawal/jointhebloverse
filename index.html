@@ -23,10 +23,49 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>DeepView</title>
   </head>
   <body>
-    <div style="position: sticky; top: 0px;">
+    <div
+      id="container"
+      style="height: auto; position: sticky; top: 0; z-index: 10; ;"
+      class="w-100  d-flex justify-content-between align-items-center wrap "
+    >
+      <div class="d-flex align-items-center">
+        <img
+          class="mk"
+          src="./assets/icons/IconLogo.svg"
+          alt=""
+          height="48px"
+          id="logo"
+        />
+        <div style="overflow: hidden; background: black;">
+          <img
+            id="letter"
+            src="./assets/icons/logo-letter.png"
+            class="logo-letter slide-in-top  "
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <div style="overflow: hidden; background: black;">
+          <a id="about" class="abt mr-3 slide-in-top  " href="about.html"
+            >About Us</a
+          >
+        </div>
+        <button id="button" class="btn-light  ">
+          <a
+            class="mail"
+            target="_blank"
+            href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+            target="_top"
+            >Contact Us</a
+          >
+        </button>
+      </div>
+    </div>
+    <!-- <div style="position: sticky; top: 0px;">
       <img
         style="position: absolute; top: 2vh;"
         src="./assets/icons/IconLogo.svg"
@@ -37,7 +76,7 @@
       />
 
       <button
-        style="position: absolute; top: 2vh; right:3vw;"
+        style="position: absolute; top: 2vh; right:3vw;z-index: 100;"
         id="button"
         class="btn-light  "
       >
@@ -52,23 +91,16 @@
     </div>
     <nav
       id="navbar"
-      class="d-flex justify-content-between align-items-center nav-area fit mx-auto width"
+      class="d-flex justify-content-between align-items-center nav-areas fit size p-0  "
     >
       <img
-        style="left: -5.1vw;  position: relative;"
         id="letter"
         src="./assets/icons/logo-letter.png"
-        class="logo-letter"
+        class="logo-letter "
         alt=""
       />
-      <a
-        style="right: .3vw;  position: relative;"
-        id="about"
-        class="abt pr-3"
-        href="about.html"
-        >About Us</a
-      >
-    </nav>
+      <a id="about" class="abt" href="about.html">About Us</a>
+    </nav> -->
     <!-- <div class="d-flex nav-area align-items-center justify-content-between ">
       <img
         src="./assets/icons/IconLogo.svg"
