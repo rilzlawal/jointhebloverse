@@ -17,9 +17,6 @@ let logo = document.getElementById("logo");
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  console.log(`prev  = ${prevScrollpos}`);
-  console.log(`curr = ${currentScrollPos}`);
-
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("letter").style.display = "block";
     document.getElementById("about").style.display = "block";
