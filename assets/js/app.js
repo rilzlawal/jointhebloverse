@@ -17,12 +17,21 @@ let logo = document.getElementById("logo");
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
+  console.log(`prev  = ${prevScrollpos}`);
+  console.log(`curr = ${currentScrollPos}`);
+
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("letter").style.display = "block";
     document.getElementById("about").style.display = "block";
     document.getElementById("container").style.background = "black";
-    logo.style.transform = " translateX(0px)";
-    button.style.transform = " translateX(0px)";
+    logo.style.transform = " translate(0px)";
+    button.style.transform = " translate(0px)";
+  } else if (currentScrollPos < 1) {
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("about").style.display = "block";
+    document.getElementById("container").style.background = "black";
+    logo.style.transform = " translate(0px)";
+    button.style.transform = " translate(0px)";
   } else {
     document.getElementById("letter").style.display = "none";
     document.getElementById("about").style.display = "none";
