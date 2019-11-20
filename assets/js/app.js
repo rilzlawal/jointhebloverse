@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-console.log("we out here three");
-=======
 $(document).ready(function() {
   $(".owl-carousel").owlCarousel({
     nav: true,
@@ -27,4 +24,3 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
->>>>>>> ft-animation
