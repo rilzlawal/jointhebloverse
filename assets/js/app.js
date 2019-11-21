@@ -6,7 +6,22 @@ $(document).ready(function() {
     autoWidth: true,
     center: true,
     loop: true,
-    items: 1
+    items: 1,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 1,
+        nav: false
+      },
+      1000: {
+        items: 1,
+        nav: true
+      }
+    }
   });
 });
 
