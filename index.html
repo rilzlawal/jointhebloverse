@@ -23,14 +23,26 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <title>DeepView</title>
+    <title>Document</title>
   </head>
-  <body>
-    <div
-      id="container"
-      style="height: auto; position: sticky; top: 0; z-index: 10; ;"
-      class="w-100  d-flex justify-content-between align-items-center wrap repaint navo"
-    >
+
+  <body id="root">
+    <div class="mobile-nav">
+      <span
+        ><img
+          src="./assets/icons/IconLogo.svg"
+          alt="logo"
+          class="main-logo"
+          id="main-logo"
+        /><span class="text-white">DeepView</span>
+      </span>
+      <img
+        onclick="openNav()"
+        class="open-side-bar-button"
+        src="./assets/icons/menu.svg"
+      />
+    </div>
+    <div id="container" class=" wrap desktop-nav head-main ">
       <div class="d-flex align-items-center">
         <img
           class="mk"
@@ -65,16 +77,80 @@
         </button>
       </div>
     </div>
+    <!-- <div class='desktop-nav' style="position: sticky; top: 0px;">
+        <img style="position: absolute; top: 2vh;" src="./assets/icons/IconLogo.svg" alt="" class="main-logo" height="48px" id="main-logo" />
+        <button style="position: absolute; top: 2vh; right:3vw;" id="button" class="btn-light">  
+        <a
+          class="mail"
+          target="_blank"
+          href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+          target="_top"
+          >Contact Us</a
+        >
+      </button>
+    </div> -->
+    <!-- Mobile View Sidebar -->
+    <div id="mySidenav" class="sidenav">
+      <div class="mobile-nav">
+        <span
+          ><img
+            src="./assets/icons/IconLogo.svg"
+            alt="logo"
+            class="main-logo"
+            id="main-logo"
+          /><span class="text-white">DeepView</span>
+        </span>
+        <img
+          onclick="closeNav()"
+          class="close-side-bar-button m-3"
+          src="./assets/icons/close.svg"
+        />
+      </div>
+
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+      <button id="button" class="btn-light">
+        <a
+          target="_blank"
+          href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+          target="_top"
+          >Contact Us</a
+        >
+      </button>
+      <footer class="container">
+        <div class="">
+          <div class="row justify-content-start social">
+            <a href="javascript:void(0);" class="social-links" target="_blank">
+              <img src="./assets/icons/facebook.svg" alt="facebook" />
+            </a>
+            <a href="javascript:void(0);" class="social-links" target="_blank">
+              <img src="./assets/icons/twitter.svg" alt="twitter" />
+            </a>
+            <a href="javascript:void(0);" class="social-links" target="_blank">
+              <img src="./assets/icons/linkedin.svg" alt="linkedin" />
+            </a>
+          </div>
+          <div class="subcontainer">
+            <a href="javascript:void(0);" class="terms" target="_blank">
+              Terms of use
+            </a>
+            <a href="javascript:void(0);" class="terms" target="_blank">
+              Privacy
+            </a>
+            <p class="deepview opacity">&#169; 2019 DeepView</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
     <main class="first">
       <main class="hero-body d-flex">
-        <div
-          class="hero-text-area d-flex flex-column justify-content-center w-50"
-        >
+        <div class="hero-text-area d-flex flex-column justify-content-center ">
           <h2 class="text-white">
             A privacy-focused platform to monitor and archive business
             communications
           </h2>
-          <div class="text-point mt-4">
+          <div class="text-point mt-3">
             <img src="./assets/icons/check-mark.svg" alt="" />
             <p>
               Real-time recognition and alerting of compliance and data loss
@@ -86,7 +162,7 @@
             <img src="./assets/icons/check-mark.svg" alt="" />
             <p>
               GDPR compliant monitoring and data archiving functionality,
-              enables our clients to be in line with requirements from their
+              enables our clients to be in line with requirements fromtheir
               respective regulatory bodies
             </p>
           </div>
@@ -94,13 +170,15 @@
             <button
               data-toggle="modal"
               data-target="#requestDemo"
-              class="btn-accent"
+              class="btn-accent mt-4"
             >
               Request Demo
             </button>
           </div>
         </div>
-        <div class="w-50 d-flex justify-content-center align-items-center">
+        <div
+          class="helmet w-50 d-flex justify-content-center align-items-center"
+        >
           <img
             class="img-fluid"
             src="./assets/icons/DeepView_Img1.png"
@@ -116,7 +194,7 @@
     <main class="section-two central">
       <div class="the-problem d-flex">
         <div
-          class=" problem-image d-flex justify-content-center align-items-center"
+          class="problem-image d-flex justify-content-center align-items-center"
         >
           <img
             src="./assets/icons/DeepView_DiverProblem_SVG.svg"
@@ -128,36 +206,65 @@
           class=" problem-text d-flex flex-column justify-content-center p-3"
         >
           <h3 class="text-white">The Problem</h3>
-          <p>
+          <div class="text-white">
             Social media apps and channels are not built to be compliant or
-            secure. <br />
-            Current digital risk monitoring solutions cannot read photos and
-            videos. Archiving and monitoring solutions do not meet privacy and
-            GDPR standards, especially on BYOD. Reputations and security are
-            risked daily with enthusiastic employees posting Instagram photos
-            and videos on LinkedIn .
-          </p>
+            secure.
+          </div>
+          <div class="text-point p-0 mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div class="">
+              Current digital risk monitoring solutions cannot read photos and
+              videos.
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Archiving and monitoring solutions do not meet privacy and GDPR
+              standards, especially on BYOD.
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Reputations and security are risked daily with enthusiastic
+              employees posting Instagram photos and videos on Linkedin
+            </div>
+          </div>
         </div>
       </div>
       <div class=" d-flex the-solution">
-        <div
-          class=" problem-text d-flex flex-column justify-content-center p-3"
-        >
+        <div class="problem-text d-flex flex-column justify-content-center p-3">
           <h3 class="text-white">Our Solution</h3>
-          <p class="">
+          <div class="text-white">
             The first platform to automate the entire end-to-end monitoring
             lifecycle with an enterprise-wide regulatory intelligence, including
-            GDPR . <br />
-
-            Real-time alerts for fast response to data leaks via video, text and
-            photo and organisations awareness of public data leaks Evidence to
-            regulators of 'best-practice' in data monitoring and archiving Under
-            120 seconds onboarding time, tailored to specific organisations and
-            key risk personal
-          </p>
+            GDPR .
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Real-time alerts for fast response to data leaks via video, text
+              and photo and organisations awareness of public data leaks
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Evidence to regulators of 'best-practice' in data monitoring and
+              archiving
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Under 120 seconds onboarding time, tailored to specific
+              organisations and key risk personal
+            </div>
+          </div>
         </div>
         <div
-          class=" problem-image d-flex justify-content-center align-items-center"
+          class="problem-image d-flex justify-content-center align-items-center"
         >
           <img
             src="./assets/icons/DeepView_DiverSolution_SVG.svg"
@@ -172,15 +279,15 @@
         <h3 class="text-white">
           Our Products
         </h3>
-        <p class="text-center mt-3 text-white opacity">
+        <div class="text-center mt-3 text-white opacity">
           DeepView delivers to make this complex issue a non-factor DeepView
           delivers a unified portal for managing risk on cooperate communication
           platforms meaning you now have one location that lets you record
           chats, guard against leaks and seamlessly manage risks across all the
           platforms
-        </p>
+        </div>
       </div>
-      <div class="d-flex justify-content-between mt-5 ">
+      <div class="d-flex justify-content-between mt-5 guards">
         <div class="d-flex box flex-column box-container ">
           <div class=" box-area">
             <img
@@ -209,7 +316,6 @@
               alt=""
             />
           </div>
-
           <p class=" text-white pt-3 opacity ">
             <span class="accent opacity"> Real-Time Alerts</span> For Fast
             Response to Data Leaks.
@@ -270,8 +376,8 @@
       </div>
       <div class="report d-flex flex-column align-items-center">
         <div class=" text-center mx-auto">
-          <h3 class="text-white opacity reporting ">
-            Reporting , Archiving and Better Digital <br />
+          <h3 class="text-white opacity reporting">
+            Reporting, Archiving and Better Digital <br />
             Safety
           </h3>
         </div>
@@ -348,7 +454,7 @@
           </div>
         </div>
       </div>
-      <div class="the-problem d-flex">
+      <div class="welcome-to-deep the-problem d-flex">
         <div
           class=" problem-image d-flex justify-content-center align-items-center opacity"
         >
@@ -362,7 +468,7 @@
           class="problem-text d-flex justify-content-center align-items-center"
         >
           <div
-            class="  d-flex flex-column justify-content-center align-items-start p-3"
+            class="d-flex flex-column justify-content-center align-items-start p-3"
           >
             <h3 class="text-white opacity footer-text">
               Welcome to DeepView. <br />
@@ -406,7 +512,7 @@
     </footer>
     <!-- imageguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="imageguard"
       tabindex="-1"
       role="dialog"
@@ -447,18 +553,19 @@
               >Gramm-Leach-Bliley Act (US) 1999 , CONC 3.10</a
             >
             <p class="pt-4">
-              To get more info click on the link below
+              These are just examples of the global regulations this product
+              meets. For more questions, please ask our Buddies
             </p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <a class="links">Learn More</a>
-            </div>
+            <div
+              class="d-flex justify-content-center align-items-center mt-4"
+            ></div>
           </div>
         </div>
       </div>
     </div>
     <!-- chartguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="chartguard"
       tabindex="-1"
       role="dialog"
@@ -499,18 +606,19 @@
               >GFINRA Rule 4510 NASD Rule 2210 (b)</a
             >
             <p class="pt-4">
-              To get more info click on the link below
+              These are just examples of the global regulations this product
+              meets. For more questions, please ask our Buddies
             </p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <a class="links">Learn More</a>
-            </div>
+            <div
+              class="d-flex justify-content-center align-items-center mt-4"
+            ></div>
           </div>
         </div>
       </div>
     </div>
     <!-- corpguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="corpguard"
       tabindex="-1"
       role="dialog"
@@ -546,30 +654,26 @@
               href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/4510"
               target="_blank"
               class="new-blue"
-              >FINRA Rule 4510 NASD Rule 2210 (b)</a
+              >FINRA Rule 4510
+            </a>
+            <br />
+            <a
+              href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
+              target="_blank"
+              class="new-blue"
+              >NASD Rule 2210 (b)</a
             >
             <p class="pt-4">
-              To get more info click on the links below
+              These are just examples of the global regulations this product
+              meets. For more questions, please ask our Buddies
             </p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <a class="links">Info one</a>
-              <div class="mx-4">
-                |
-              </div>
-              <a
-                class="links"
-                href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
-                target="_blank"
-                >Info two</a
-              >
-            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- trainingguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="trainingguard"
       tabindex="-1"
       role="dialog"
@@ -600,12 +704,6 @@
               DeepView Training Short and fun animations to assist with
               implementing Social Media policy and promoting good practice.
             </p>
-
-            <!-- <div class="d-flex justify-content-center align-items-center mt-4">
-              <button class="btn-accent">
-                Download Link
-              </button>
-            </div> -->
           </div>
         </div>
       </div>
@@ -691,7 +789,20 @@
         </div>
       </div>
     </div>
+    <script>
+      /* Open the sidenav */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+        document.getElementById("root").style.overflow = "hidden";
+        // console.log('clicked')
+      }
 
+      /* Close/hide the sidenav */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("root").style.overflow = "auto";
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/89f0d427e9.js"
       crossorigin="anonymous"
