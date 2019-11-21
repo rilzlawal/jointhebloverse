@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="DeepView">
+    <meta name="description" content="A privacy-focused platform to monitor and archive business communications">
+    <meta name="keywords" content="deep view, social media compliance, deep fake, image recognition, monitoring, social media, risk management">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="5 days">
+    <meta name="author" content="Deepview">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -25,12 +30,24 @@
     />
     <title>DeepView</title>
   </head>
-  <body>
-    <div
-      id="container"
-      style="height: auto; position: sticky; top: 0; z-index: 10; ;"
-      class="w-100  d-flex justify-content-between align-items-center wrap "
-    >
+
+  <body id="root">
+    <div class="mobile-nav">
+      <span
+        ><img
+          src="./assets/icons/IconLogo.svg"
+          alt="logo"
+          class="main-logo"
+          id="main-logo"
+        /><span class="text-white">DeepView</span>
+      </span>
+      <img
+        onclick="openNav()"
+        class="open-side-bar-button"
+        src="./assets/icons/menu.svg"
+      />
+    </div>
+    <div id="container" class=" wrap desktop-nav head-main ">
       <div class="d-flex align-items-center">
         <img
           class="mk"
@@ -58,70 +75,16 @@
           <a
             class="mail"
             target="_blank"
-            href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+            href="mailto:ea@deepview.com?Subject=Welcome%20To%20Deepview"
             target="_top"
             >Contact Us</a
           >
         </button>
       </div>
     </div>
-    <!-- <div style="position: sticky; top: 0px;">
-      <img
-        style="position: absolute; top: 2vh;"
-        src="./assets/icons/IconLogo.svg"
-        alt=""
-        class="main-logo"
-        height="48px"
-        id="main-logo"
-      />
-
-      <button
-        style="position: absolute; top: 2vh; right:3vw;z-index: 100;"
-        id="button"
-        class="btn-light  "
-      >
-        <a
-          class="mail"
-          target="_blank"
-          href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
-          target="_top"
-          >Contact Us</a
-        >
-      </button>
-    </div>
-    <nav
-      id="navbar"
-      class="d-flex justify-content-between align-items-center nav-areas fit size p-0  "
-    >
-      <img
-        id="letter"
-        src="./assets/icons/logo-letter.png"
-        class="logo-letter "
-        alt=""
-      />
-      <a id="about" class="abt" href="about.html">About Us</a>
-    </nav> -->
-    <!-- <div class="d-flex nav-area align-items-center justify-content-between ">
-      <img
-        src="./assets/icons/IconLogo.svg"
-        alt=""
-        class="main-logo"
-        height="48px"
-        id="main-logo"
-      />
-      <nav
-        id="navbar"
-        class="d-flex bg-danger justify-content-between align-items-center nav-area fit "
-      >
-        <img
-          id="letter"
-          src="./assets/icons/logo-letter.png"
-          class="logo-letter"
-          alt=""
-        />
-        <a id="about" class="abt pr-3" href="about.html">About Us</a>
-      </nav>
-      <button id="button" class="btn-light mr-5 ">
+    <!-- <div class='desktop-nav' style="position: sticky; top: 0px;">
+        <img style="position: absolute; top: 2vh;" src="./assets/icons/IconLogo.svg" alt="" class="main-logo" height="48px" id="main-logo" />
+        <button style="position: absolute; top: 2vh; right:3vw;" id="button" class="btn-light">  
         <a
           class="mail"
           target="_blank"
@@ -131,49 +94,68 @@
         >
       </button>
     </div> -->
-    <!-- <nav
-      id="navbar"
-      class="d-flex justify-content-between nav-area align-items-center  "
-    >
-      <div class="icon-area d-flex align-items-center ">
+    <!-- Mobile View Sidebar -->
+    <div id="mySidenav" class="sidenav">
+      <div class="mobile-nav">
+        <span
+          ><img
+            src="./assets/icons/IconLogo.svg"
+            alt="logo"
+            class="main-logo"
+            id="main-logo"
+          /><span class="text-white">DeepView</span>
+        </span>
         <img
-          src="./assets/icons/IconLogo.svg"
-          alt=""
-          class="main-logo"
-          height="48px"
-          id="main-logo"
-        />
-        <img
-          id="letter"
-          src="./assets/icons/logo-letter.png"
-          class="logo-letter"
-          alt=""
+          onclick="closeNav()"
+          class="close-side-bar-button m-3"
+          src="./assets/icons/close.svg"
         />
       </div>
-      <div class="links-area">
-        <a id="about" class="abt pr-3" href="about.html">About Us</a>
-    
-        <button id="button" class="btn-light ">
-          <a
-            class="mail"
-            target="_blank"
-            href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
-            target="_top"
-            >Contact Us</a
-          >
-        </button>
-      </div>
-    </nav> -->
+
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+      <button id="button" class="btn-light">
+        <a
+          target="_blank"
+          href="mailto:someone@example.com?Subject=Welcome%20to%20Deepview"
+          target="_top"
+          >Contact Us</a
+        >
+      </button>
+      <footer class="container">
+        <div class="">
+          <div class="row justify-content-start social">
+            <a href="javascript:void(0);" class="social-links" target="_blank">
+              <img src="./assets/icons/facebook.svg" alt="facebook" />
+            </a>
+            <a href="javascript:void(0);" class="social-links" target="_blank">
+              <img src="./assets/icons/twitter.svg" alt="twitter" />
+            </a>
+            <a href="javascript:void(0);" class="social-links" target="_blank">
+              <img src="./assets/icons/linkedin.svg" alt="linkedin" />
+            </a>
+          </div>
+          <div class="subcontainer">
+            <a href="javascript:void(0);" class="terms" target="_blank">
+              Terms of use
+            </a>
+            <a href="javascript:void(0);" class="terms" target="_blank">
+              Privacy
+            </a>
+            <p class="deepview opacity">&#169; 2019 DeepView</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
     <main class="first">
       <main class="hero-body d-flex">
-        <div
-          class="hero-text-area d-flex flex-column justify-content-center w-50"
-        >
+        <div class="hero-text-area d-flex flex-column justify-content-center ">
           <h2 class="text-white">
             A privacy-focused platform to monitor and archive business
             communications
           </h2>
-          <div class="text-point mt-4">
+          <div class="text-point mt-3">
             <img src="./assets/icons/check-mark.svg" alt="" />
             <p>
               Real-time recognition and alerting of compliance and data loss
@@ -193,13 +175,15 @@
             <button
               data-toggle="modal"
               data-target="#requestDemo"
-              class="btn-accent"
+              class="btn-accent mt-4"
             >
               Request Demo
             </button>
           </div>
         </div>
-        <div class="w-50 d-flex justify-content-center align-items-center">
+        <div
+          class="helmet w-50 d-flex justify-content-center align-items-center"
+        >
           <img
             class="img-fluid"
             src="./assets/icons/DeepView_Img1.png"
@@ -215,7 +199,7 @@
     <main class="section-two central">
       <div class="the-problem d-flex">
         <div
-          class=" problem-image d-flex justify-content-center align-items-center"
+          class="problem-image d-flex justify-content-center align-items-center"
         >
           <img
             src="./assets/icons/DeepView_DiverProblem_SVG.svg"
@@ -227,38 +211,65 @@
           class=" problem-text d-flex flex-column justify-content-center p-3"
         >
           <h3 class="text-white">The Problem</h3>
-          <p>
+          <div class="text-white">
             Social media apps and channels are not built to be compliant or
-            secure. <br />
-            Current digital risk monitoring solutions cannot read photos and
-            videos. We also know it is tough finding archiving and monitoring
-            solutions to meet privacy and GDPR standards. So, given reputations
-            and security are risked daily with enthusiastic employees posting
-            instagram photos and videos on linked in. Welcome to the first,
-            patent-pending breach alert-system for inadvertent data leaks photos
-            and videos. The system is smart enough to understand passwords on
-            Post-it notes, programs and client data on computer screens. Click
-            here to see how Rachel Tobac could enter your company.
-          </p>
+            secure.
+          </div>
+          <div class="text-point p-0 mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div class="">
+              Current digital risk monitoring solutions cannot read photos and
+              videos.
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Archiving and monitoring solutions do not meet privacy and GDPR
+              standards, especially on BYOD.
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Reputations and security are risked daily with enthusiastic
+              employees posting Instagram photos and videos on Linkedin
+            </div>
+          </div>
         </div>
       </div>
       <div class=" d-flex the-solution">
-        <div
-          class=" problem-text d-flex flex-column justify-content-center p-3"
-        >
+        <div class="problem-text d-flex flex-column justify-content-center p-3">
           <h3 class="text-white">Our Solution</h3>
-          <p class="">
-            DeepView is the first privacy focused solution. What does it mean:
-            for private chats, staff click on a link, within 90 seconds they
-            have on-boarded a recording solution for their work chats. Welcome
-            to ChatGuard! For public data leaks: a real-time breach detection
-            tool, identifying data leaks by text, photo and video. The first
-            platform to automate the entire end-to-end monitoring lifecycle with
-            an enterprise-wide regulatory intelligence, including GDPR .
-          </p>
+          <div class="text-white">
+            The first platform to automate the entire end-to-end monitoring
+            lifecycle with an enterprise-wide regulatory intelligence, including
+            GDPR .
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Real-time alerts for fast response to data leaks via video, text
+              and photo and organisations awareness of public data leaks
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Evidence to regulators of 'best-practice' in data monitoring and
+              archiving
+            </div>
+          </div>
+          <div class="text-point mt-3">
+            <img src="./assets/icons/check-mark.svg" alt="" />
+            <div>
+              Under 120 seconds onboarding time, tailored to specific
+              organisations and key risk personal
+            </div>
+          </div>
         </div>
         <div
-          class=" problem-image d-flex justify-content-center align-items-center"
+          class="problem-image d-flex justify-content-center align-items-center"
         >
           <img
             src="./assets/icons/DeepView_DiverSolution_SVG.svg"
@@ -273,15 +284,15 @@
         <h3 class="text-white">
           Our Products
         </h3>
-        <p class="text-center mt-3 text-white opacity">
+        <div class="text-center mt-3 text-white opacity">
           DeepView delivers to make this complex issue a non-factor DeepView
           delivers a unified portal for managing risk on cooperate communication
           platforms meaning you now have one location that lets you record
           chats, guard against leaks and seamlessly manage risks across all the
           platforms
-        </p>
+        </div>
       </div>
-      <div class="d-flex justify-content-between mt-5 ">
+      <div class="d-flex justify-content-between mt-5 guards">
         <div class="d-flex box flex-column box-container ">
           <div class=" box-area">
             <img
@@ -310,7 +321,6 @@
               alt=""
             />
           </div>
-
           <p class=" text-white pt-3 opacity ">
             <span class="accent opacity"> Real-Time Alerts</span> For Fast
             Response to Data Leaks.
@@ -371,8 +381,8 @@
       </div>
       <div class="report d-flex flex-column align-items-center">
         <div class=" text-center mx-auto">
-          <h3 class="text-white opacity reporting ">
-            Reporting , Archiving and Better Digital <br />
+          <h3 class="text-white opacity reporting">
+            Reporting, Archiving and Better Digital <br />
             Safety
           </h3>
         </div>
@@ -398,24 +408,14 @@
                 alt=""
               />
             </div>
-            <h1 class="accent">65%</h1>
+            <h1 class="accent">60%</h1>
             <h5 class="text-white pt-2">
-              Businesses worried that consumer chat apps can create a security
-              “loophole”
+              of information to hack a company can be found on Instagram
             </h5>
             <p class="text-white opacity pt-3">
-              Half were troubled by their inability to monitor and audit
-              employee communications. Ovum’s 2017 “Secure Enterprise Messaging”
-              survey of 300 businesses found that
-              <span class="accent">£37,000</span> In March 2017, a former
-              investment banker was fined more than by the Financial Conduct
-              Authority for sharing confidential information with a friend over
-              WhatsApp in an effort to sound impressive – texting that he would
-              be able to pay off his mortgage if one of the deals was
-              successful. <br />
-              <span class="accent">Over 1 in 5</span> Cyber attacks occur from
-              employees unintentionally sharing data through a range of means
-              including social media and loss of devices
+              According to Rachel Tobac, renowned social engineer, 60% of the
+              information needed to hack a company is found on Instagram as
+              employees inadvertently share confidential data.
             </p>
           </div>
 
@@ -427,14 +427,15 @@
                 alt=""
               />
             </div>
-            <h1 class="accent">60%</h1>
+            <h1 class="accent">65%</h1>
             <h5 class="text-white pt-2">
-              of information to hack a company can be found on instagram
+              businesses worried that consumer chat apps can create a security
+              "loophole"
             </h5>
             <p class="text-white opacity pt-3">
-              According to Rachel Tobac, renowned social engineer, 60% of the
-              information needed to hack a company is found on instagram as
-              employees inadvertently share confidential data
+              Half were troubled by their inability to monitor and audit
+              employee communications. Ovum's 2017 "Secure Enterprise Messaging"
+              survey of 300 businesses.
             </p>
           </div>
           <div class="sixty-five">
@@ -445,17 +446,20 @@
                 alt=""
               />
             </div>
-            <h1 class="accent">71%</h1>
+            <h1 class="accent">50%</h1>
             <h5 class="text-white pt-2">
-              of staff do not adhere to social media policies
+              more likely to achieve sales quota when teams are engaged on
+              social media
             </h5>
             <p class="text-white opacity pt-3">
-              "Reporting, archiving and better digital safety"
+              Research from LinkedIn and Hootsuite found that executives have a
+              key role to play in using social media to enhance the reputation
+              of their firms, attract talent, and increase sales.
             </p>
           </div>
         </div>
       </div>
-      <div class="the-problem d-flex">
+      <div class="welcome-to-deep the-problem d-flex">
         <div
           class=" problem-image d-flex justify-content-center align-items-center opacity"
         >
@@ -469,7 +473,7 @@
           class="problem-text d-flex justify-content-center align-items-center"
         >
           <div
-            class="  d-flex flex-column justify-content-center align-items-start p-3"
+            class="d-flex flex-column justify-content-center align-items-start p-3"
           >
             <h3 class="text-white opacity footer-text">
               Welcome to DeepView. <br />
@@ -513,7 +517,7 @@
     </footer>
     <!-- imageguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="imageguard"
       tabindex="-1"
       role="dialog"
@@ -536,34 +540,37 @@
             <h4 class="opacity">THE PROBLEM</h4>
             <p class="opacity">
               Reputational and security risk via photos and videos. Inadvertent
-              photo data leaks via employees’ social media, particularly photos
+              photo data leaks via employees' social media, particularly photos
               and videos. These leaks include passwords on Post-it notes,
-              programs and client data on computer screens
+              programs and client data on computer screens.
             </p>
             <h4 class="opacity pt-4">OUR SOLUTION</h4>
             <p class="opacity">
-              Real-time alerts for fast response to data leaks via video, text
-              and photo. Allowing you to remove the data leaks and show
-              regulators ‘best-practice’ data management
+              DeepView ImageGuard Real-time alerts for fast response to data
+              leaks via video, text and photo. Allowing you to remove the data
+              leaks and show regulators 'best-practice' data management.
             </p>
             <h4 class="opacity pt-4">REGULATIONS MET</h4>
-            <p class="new-blue">Gramm-Leach-Bliley Act (US) 1999 , CONC 3.10</p>
+            <a
+              href="https://www.govinfo.gov/content/pkg/PLAW-106publ102/pdf/PLAW-106publ102.pdf"
+              target="_blank"
+              class="new-blue"
+              >Gramm-Leach-Bliley Act (US) 1999 , CONC 3.10</a
+            >
             <p class="pt-4">
-              To get more info click the button below to download a one page
-              document.
+              These are just examples of the global regulations this product
+              meets. For more questions, please ask our Buddies
             </p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <button class="btn-accent">
-                Download Link
-              </button>
-            </div>
+            <div
+              class="d-flex justify-content-center align-items-center mt-4"
+            ></div>
           </div>
         </div>
       </div>
     </div>
     <!-- chartguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="chartguard"
       tabindex="-1"
       role="dialog"
@@ -585,34 +592,38 @@
           <div class="p-5 box-contain ">
             <h4 class="opacity">THE PROBLEM</h4>
             <p class="opacity">
-              Corporate social media channels being screen shot and sent to
-              compliance for record keeping across LinkedIn, Facebook and
-              Twitter.
+              Requirement to record and archive social media 'chat' channels
+              used on BYOD and corporate devices by employees eg WhatsApp,
+              WeChat, LinkedIn messaging
             </p>
             <h4 class="opacity pt-4">OUR SOLUTION</h4>
             <p class="opacity">
-              Real-time alerts for fast response to data leaks via video, text
-              and photo. Allowing you to remove the data leaks and show
-              regulators ‘best-practice’ data management
+              DeepView ChatGuard Splits work and personal, and archive work
+              chats: allowing employees fast and compliant access to personal
+              networks. This provides automated discovery of insider trading and
+              contractually binding statements where needed
             </p>
             <h4 class="opacity pt-4">REGULATIONS MET</h4>
-            <p class="new-blue">GFINRA Rule 4510 NASD Rule 2210 (b)</p>
+            <a
+              href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/711097/guide-to-the-general-data-protection-regulation-gdpr-1-0.pdf"
+              target="_blank"
+              class="new-blue"
+              >GFINRA Rule 4510 NASD Rule 2210 (b)</a
+            >
             <p class="pt-4">
-              To get more info click the button below to download a one page
-              document.
+              These are just examples of the global regulations this product
+              meets. For more questions, please ask our Buddies
             </p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <button class="btn-accent">
-                Download Link
-              </button>
-            </div>
+            <div
+              class="d-flex justify-content-center align-items-center mt-4"
+            ></div>
           </div>
         </div>
       </div>
     </div>
     <!-- corpguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="corpguard"
       tabindex="-1"
       role="dialog"
@@ -634,33 +645,40 @@
           <div class="p-5 box-contain ">
             <h4 class="opacity">THE PROBLEM</h4>
             <p class="opacity">
-              Corporate social media channels being screen shot and sent to
-              compliance for record keeping across LinkedIn, Facebook and
-              Twitter.
+              Requirement to record, archive and monitor corporate social media
+              channels for compliance and data leaks eg LinkedIn, Twitter and
+              Facebook
             </p>
             <h4 class="opacity pt-4">OUR SOLUTION</h4>
             <p class="opacity">
               Archiving and record keeping for corporate social media channels
-              in line with REGULATIONS MET.
+              in line with regulatory requirements
             </p>
             <h4 class="opacity pt-4">REGULATIONS MET</h4>
-            <p class="new-blue">FINRA Rule 4510 NASD Rule 2210 (b)</p>
+            <a
+              href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/4510"
+              target="_blank"
+              class="new-blue"
+              >FINRA Rule 4510
+            </a>
+            <br />
+            <a
+              href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210"
+              target="_blank"
+              class="new-blue"
+              >NASD Rule 2210 (b)</a
+            >
             <p class="pt-4">
-              To get more info click the button below to download a one page
-              document.
+              These are just examples of the global regulations this product
+              meets. For more questions, please ask our Buddies
             </p>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <button class="btn-accent">
-                Download Link
-              </button>
-            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- trainingguard modal -->
     <div
-      class="modal fade"
+      class="modal fade guard-modal"
       id="trainingguard"
       tabindex="-1"
       role="dialog"
@@ -682,19 +700,15 @@
           <div class="p-5 box-contain ">
             <h4 class="opacity">THE PROBLEM</h4>
             <p class="opacity">
-              Human Error.
+              Education is one of the most effective ways to safeguard against
+              non-malicious employee error, especially when it comes to social
+              media.
             </p>
             <h4 class="opacity pt-4">OUR SOLUTION</h4>
             <p class="opacity">
-              Short and fun animations to assist with implementing Social Media
-              policy and promoting good practice.
+              DeepView Training Short and fun animations to assist with
+              implementing Social Media policy and promoting good practice.
             </p>
-
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <button class="btn-accent">
-                Download Link
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -780,7 +794,20 @@
         </div>
       </div>
     </div>
+    <script>
+      /* Open the sidenav */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+        document.getElementById("root").style.overflow = "hidden";
+        // console.log('clicked')
+      }
 
+      /* Close/hide the sidenav */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("root").style.overflow = "auto";
+      }
+    </script>
     <script
       src="https://kit.fontawesome.com/89f0d427e9.js"
       crossorigin="anonymous"

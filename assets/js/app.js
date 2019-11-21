@@ -6,7 +6,22 @@ $(document).ready(function() {
     autoWidth: true,
     center: true,
     loop: true,
-    items: 1
+    items: 1,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 1,
+        nav: false
+      },
+      1000: {
+        items: 1,
+        nav: true
+      }
+    }
   });
 });
 
@@ -21,8 +36,14 @@ window.onscroll = function() {
     document.getElementById("letter").style.display = "block";
     document.getElementById("about").style.display = "block";
     document.getElementById("container").style.background = "black";
-    logo.style.transform = " translateX(0px)";
-    button.style.transform = " translateX(0px)";
+    logo.style.transform = " translate(0px)";
+    button.style.transform = " translate(0px)";
+  } else if (currentScrollPos < 1) {
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("about").style.display = "block";
+    document.getElementById("container").style.background = "black";
+    logo.style.transform = " translate(0px)";
+    button.style.transform = " translate(0px)";
   } else {
     document.getElementById("letter").style.display = "none";
     document.getElementById("about").style.display = "none";

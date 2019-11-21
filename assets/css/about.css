@@ -1,58 +1,122 @@
 /* ==========================================================================
     ABOUT US
     ========================================================================== */
+
 #about-us {
   text-align: center;
   padding: 60px 0 0;
   margin: 0;
   width: 100%;
 }
+
 #about-us #divers-story .details {
   text-align: left;
 }
+
+#about-us #divers-story .details h2 {
+  text-align: left;
+}
+
 #about-us #divers-story .details p {
   font: Regular 15px/25px PT Sans Pro;
   letter-spacing: 1.2px;
   color: #ffffff;
   opacity: 0.8;
 }
+
 #about-us #be-our-buddies {
-  margin: 150px auto 0;
+  margin: 60px auto 0;
 }
+
 #about-us #be-our-buddies .details {
   text-align: left;
 }
+
 #about-us #be-our-buddies .details p {
   font: Regular 15px/25px PT Sans Pro;
   letter-spacing: 1.2px;
   color: #ffffff;
   opacity: 0.8;
 }
+
 /* ==========================================================================
-         MEDIA QUERIES
-         ========================================================================== */
+             MEDIA QUERIES
+             ========================================================================== */
+
 @media only screen and (min-width: 320px) {
+  #about-us {
+    padding: 30px 0 0;
+  }
   #about-us #divers-story .details,
   #about-us #be-our-buddies .details {
     width: 100%;
   }
+  #about-us #divers-story .details h2,
+  #about-us #be-our-buddies .details h2 {
+    font: Bold 30px/50px pt-sans-pro;
+  }
+  #about-us .about-us_title {
+    text-align: left;
+    font: Bold 40px/58px PT Sans Pro;
+    padding: 0 26px;
+  }
+  #about-us #divers-story img,
+  #about-us #be-our-buddies img {
+    display: none;
+  }
   #about-us #be-our-buddies {
-    margin: 80px auto 0;
+    margin: 20px auto 0;
+  }
+  #about-us .km {
+    text-align: left;
+    padding-left: 26px;
   }
 }
+
 @media only screen and (min-width: 768px) {
+  #about-us {
+    padding: 60px 0 0;
+  }
+  #about-us .about-us_title {
+    text-align: center;
+  }
+  #about-us .km {
+    text-align: center;
+    padding-left: 26px;
+    width: 50%;
+    margin: auto;
+  }
 }
+
 @media only screen and (min-width: 1024px) {
   #about-us #divers-story .details,
   #about-us #be-our-buddies .details {
     width: 50% !important;
   }
+  #about-us #divers-story .details h2,
+  #about-us #be-our-buddies .details h2 {
+    font: Bold 40px/50px pt-sans-pro;
+  }
+  #about-us .about-us_title {
+    text-align: center;
+    font: Bold 48px/58px PT Sans Pro;
+    padding: 0 26px;
+  }
   #about-us #divers-story img,
   #about-us #be-our-buddies img {
-    width: 500px;
-    height: 500px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
   }
   #about-us #be-our-buddies {
-    margin: 150px auto 0;
+    margin: 30px auto 0;
+  }
+  @media only screen and (min-width: 1280px) {
+    #about-us #divers-story img,
+    #about-us #be-our-buddies img {
+      display: inline-block;
+      width: 500px;
+      height: 500px;
+    }
   }
 }
