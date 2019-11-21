@@ -68,6 +68,10 @@ a:hover {
   color: #00ced1b2 !important;
 }
 
+a {
+  color: #00ced1b2 !important;
+}
+
 a:hover::after {
   width: 100%;
   color: #00ced1b2 !important;
