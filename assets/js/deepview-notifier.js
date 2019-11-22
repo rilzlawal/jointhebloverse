@@ -10,6 +10,7 @@ const vm = new Vue({
     methods: {
         async onbaordClients(e) {
             e.preventDefault();
+            $("#request-button").attr("disabled", true);
             const options = {
                 username: 'ClientBot', // This will appear as user name who posts the message
                 text: `Hi <!here> ${this.request_form.fullname} requested for a demo details are attached bellow`, // <> are used for linking
@@ -50,7 +51,7 @@ const vm = new Vue({
                     setTimeout(function(){ iziToast.success({
                         id: null,
                         title: 'Success',
-                        message: 'Your request has been received our agent will contact you shortly',
+                        message: 'Your request has been received. Our agent will contact you shortly',
                         messageColor: '#fff',
                         messageSize: '',
                         messageLineHeight: '',
