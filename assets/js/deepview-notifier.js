@@ -34,7 +34,7 @@ const vm = new Vue({
                             },
                             {
                                 title: 'Product of Interest',
-                                value: `Deepfake`,
+                                value: `${this.request_form.product_of_interest}`,
                                 short: false // marks this to be wide attachment
                             }
                         ],
