@@ -46,7 +46,7 @@ const vm = new Vue({
                 .then((response) => {
                     this.request_form = {};
                     $('#requestDemo').click();
-                    iziToast.success({
+                    setTimeout(function(){ iziToast.success({
                         id: null,
                         title: 'Success',
                         message: 'Your request has been received our agent will contact you shortly',
@@ -69,7 +69,7 @@ const vm = new Vue({
                         overlayColor: 'rgba(0, 0, 0, 0.6)',
                         transitionOut: 'fadeOut',
                         timeout: 3000
-                    });
+                    }); }, 1000);
                 })
                 .catch((error) => {
                     this.request_form = {};
