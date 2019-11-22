@@ -4,7 +4,8 @@ const vm = new Vue({
     //Mock data for the value of BTC in USD
     data: {
         request_form: {},
-        url_data: ''
+        url_data: '',
+        checkedProduct:[]
     },
     methods: {
         async onbaordClients(e) {
@@ -34,7 +35,7 @@ const vm = new Vue({
                             },
                             {
                                 title: 'Product of Interest',
-                                value: `${this.request_form.product_of_interest}`,
+                                value: `${this.checkedProduct}`,
                                 short: false // marks this to be wide attachment
                             }
                         ],
