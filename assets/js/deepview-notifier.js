@@ -44,12 +44,37 @@ const vm = new Vue({
 
             axios.post(`${this.url_data}`, JSON.stringify(options))
                 .then((response) => {
-                    console.log('SUCCEEDED: Sent slack webhook: \n', response.data);
-                    resolve(response.data);
+                    this.request_form = {};
+                    $('#requestDemo').click();
+                    iziToast.success({
+                        id: null,
+                        title: 'Success',
+                        message: 'Your request has been received our agent will contact you shortly',
+                        messageColor: '#fff',
+                        messageSize: '',
+                        messageLineHeight: '',
+                        backgroundColor: '',
+                        theme: 'dark', // dark
+                        color: '#00ced1', // blue, red, green, yellow
+                        imageWidth: 50,
+                        maxWidth: null,
+                        zindex: 999,
+                        layout: 1,
+                        position: 'topRight', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+                        animateInside: true,
+                        drag: true,
+                        pauseOnHover: true,
+                        progressBar: true,
+                        progressBarColor: 'rgb(0, 255, 184)',
+                        overlayColor: 'rgba(0, 0, 0, 0.6)',
+                        transitionOut: 'fadeOut',
+                        timeout: 3000
+                    });
                 })
                 .catch((error) => {
-                    console.log('FAILED: Send slack webhook', error);
-                    reject(new Error('FAILED: Send slack webhook'));
+                    this.request_form = {};
+                    // console.log('FAILED: Send slack webhook', error);
+                    // reject(new Error('FAILED: Send slack webhook'));
                 });
         },
     },
