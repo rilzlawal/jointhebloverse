@@ -102,7 +102,7 @@ a:hover::after {
   font-size: 1rem;
   background: transparent !important;
   position: relative;
-  /*z-index: 2;*/
+  z-index: 1;
 }
 
 .btn-accent::after {
