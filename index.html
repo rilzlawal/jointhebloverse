@@ -766,7 +766,7 @@
                         Please provide us with some information
                     </h5>
                     <!-- Form  -->
-                    <form>
+                    <form id='request_form' @submit="onbaordClients">
                         <div class="form-group">
                             <!-- <label for="exampleInputEmail1">Email address</label> -->
                             <input
@@ -774,6 +774,7 @@
                                     class="form-control"
                                     id="demoFullName"
                                     placeholder="Full Name"
+                                    v-model="request_form.fullname"
                                     type="text"
                             />
                         </div>
@@ -783,6 +784,7 @@
                                     aria-describedby="emailHelp"
                                     class="form-control"
                                     id="demoCompany"
+                                    v-model="request_form.company"
                                     placeholder="Company"
                                     type="text"
                             />
@@ -793,6 +795,7 @@
                                     aria-describedby="emailHelp"
                                     class="form-control"
                                     id="demoPosition"
+                                    v-model="request_form.position"
                                     placeholder="Position"
                                     type="text"
                             />
@@ -803,6 +806,7 @@
                                     aria-describedby="emailHelp"
                                     class="form-control"
                                     id="demoEmail"
+                                    v-model="request_form.work_mail"
                                     placeholder="Work E-Mail"
                                     type="email"
                             />
@@ -813,6 +817,7 @@
                                     aria-describedby="emailHelp"
                                     class="form-control"
                                     id="demoInfo"
+                                    v-model="request_form.product_of_interest"
                                     placeholder="Select Product of Interest"
                                     type="text"
                             />

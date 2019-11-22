@@ -1,41 +1,40 @@
 import ('https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js');
 const vm = new Vue({
-    el: '#request-form',
+    el: '#request_form',
     //Mock data for the value of BTC in USD
-    data: { url_data: ''},
+    data: {
+        request_form: {},
+        url_data: ''
+    },
     methods: {
-        async onbaordClients(req, res) {
+        async onbaordClients(e) {
+            e.preventDefault();
             const options = {
                 username: 'ClientBot', // This will appear as user name who posts the message
-                text: `Hi <!here> <@daniellelawrence> Data requested for a demo Client's details is attached bellow`, // <> are used for linking
+                text: `Hi <!here> ${this.request_form.fullname} requested for a demo details are attached bellow`, // <> are used for linking
                 icon_emoji: ':bell:', // User icon, you can also use custom icons here
                 attachments: [ // attachments, here we also use long attachment to use more space
                     {
                         color: '#2eb886',
                         fields: [
                             {
-                                title: 'Official Address',
-                                value: `Data`,
+                                title: 'Company',
+                                value: `${this.request_form.company}`,
                                 short: true
                             },
                             {
-                                title: 'Client Phone',
-                                value: `Data`,
+                                title: 'Work E-mail',
+                                value: `${this.request_form.work_mail}`,
                                 short: true
                             },
                             {
-                                title: 'Client Mail',
-                                value: `Data`,
+                                title: 'Position',
+                                value: `${this.request_form.position}`,
                                 short: true
                             },
                             {
-                                title: 'Production',
-                                value: 'Freyda WebAPP',
-                                short: true
-                            },
-                            {
-                                title: 'Additional notes from client',
-                                value: `Data`,
+                                title: 'Product of Interest',
+                                value: `Deepfake`,
                                 short: false // marks this to be wide attachment
                             }
                         ],
