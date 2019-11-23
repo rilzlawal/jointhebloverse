@@ -51,7 +51,7 @@ const vm = new Vue({
                     setTimeout(function(){ iziToast.success({
                         id: null,
                         title: 'Success',
-                        message: 'Your request has been received. Our agent will contact you shortly',
+                        message: 'Your request has been received. A Divemastar will contact you shortly',
                         messageColor: '#fff',
                         messageSize: '',
                         messageLineHeight: '',
