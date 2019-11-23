@@ -8,7 +8,7 @@ const vm = new Vue({
         checkedProduct:[]
     },
     methods: {
-        async onbaordClients(e) {
+        async InitNotifier(e) {
             e.preventDefault();
             $("#request-button").attr("disabled", true);
             const options = {
@@ -44,6 +44,7 @@ const vm = new Vue({
                     ]
             };
 
+            // Init notification stage 1
             axios.post(`${this.url_data}`, JSON.stringify(options))
                 .then((response) => {
                     this.request_form = {};
@@ -77,6 +78,26 @@ const vm = new Vue({
                     this.request_form = {};
                     // console.log('FAILED: Send slack webhook', error);
                     // reject(new Error('FAILED: Send slack webhook'));
+                });
+
+            let config = {
+                headers: {
+                    Authorization:"Bearer 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",
+                }
+            };
+
+            let data = {
+                    "personalizations": [{"to": [{"email": 'divemaster@deepview.com'}]}],
+                    "from": {"email": `${this.request_form.work_mail}`},
+                    "subject": "Demo Request",
+                    "content": [{"type": "text/plain", "value": `Hi <!here> ${this.request_form.fullname} requested for a demo details are attached bellow`}]
+            };
+
+            axios.post('https://api.sendgrid.com/v3/mail/send', JSON.stringify(data),config).then((response) => {
+               console.log(response);
+            })
+                .catch((error) => {
+                    console.log(error);
                 });
         },
     },
