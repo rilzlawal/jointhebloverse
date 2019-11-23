@@ -1,0 +1,141 @@
+<!-- request-modal -->
+<div
+        aria-hidden="true"
+        aria-labelledby="exampleModalCenterTitle"
+        class="modal fade"
+        id="requestDemo"
+        role="dialog"
+        tabindex="-1"
+>
+    <button class="modal-close" data-dismiss="modal">
+        <img alt="" src="images/icons/Button Rounded Xsmall Inverted.svg"/>
+    </button>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div id="request-form-wrapper">
+                <div id="request-form-image-container">
+                    <div class="opacity" id="request-form-image"></div>
+                </div>
+                <div id="request-form">
+                    <h5 class="black">
+                        Please provide us with some information
+                    </h5>
+                    <!-- Form  -->
+                    <form id="request_form" @submit="InitNotifier">
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input
+                                    aria-describedby="emailHelp"
+                                    class="form-control"
+                                    id="demoFullName"
+                                    placeholder="Full Name"
+                                    required
+                                    v-model="request_form.fullname"
+                                    type="text"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input
+                                    aria-describedby="emailHelp"
+                                    class="form-control"
+                                    id="demoCompany"
+                                    required
+                                    v-model="request_form.company"
+                                    placeholder="Company"
+                                    type="text"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input
+                                    aria-describedby="emailHelp"
+                                    class="form-control"
+                                    id="demoPosition"
+                                    required
+                                    v-model="request_form.position"
+                                    placeholder="Position"
+                                    type="text"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input
+                                    aria-describedby="emailHelp"
+                                    class="form-control"
+                                    id="demoEmail"
+                                    required
+                                    v-model="request_form.work_mail"
+                                    placeholder="Work E-Mail"
+                                    type="email"
+                            />
+                        </div>
+                        <div class=" mm">
+                            <div class="pt-3">Select Product of Interest</div>
+                            <div class="m-grid mt-2">
+                                <div>
+                                    <input
+                                            class="styled-checkbox mk"
+                                            id="styled-checkbox-1"
+                                            type="checkbox"
+                                            v-model="checkedProduct"
+                                            value=" ImageGuard"
+                                    />
+                                    <label for="styled-checkbox-1">ImageGuard</label>
+                                </div>
+                                <div>
+                                    <input
+                                            class="styled-checkbox mk"
+                                            id="styled-checkbox-2"
+                                            type="checkbox"
+                                            v-model="checkedProduct"
+                                            value=" CorpGuard"
+                                    />
+                                    <label for="styled-checkbox-2">CorpGuard</label>
+                                </div>
+                                <div>
+                                    <input
+                                            class="styled-checkbox mk"
+                                            id="styled-checkbox-3"
+                                            type="checkbox"
+                                            v-model="checkedProduct"
+                                            value=" ChatGuard"
+                                    />
+                                    <label for="styled-checkbox-3">ChatGuard</label>
+                                </div>
+                                <div>
+                                    <input
+                                            class="styled-checkbox mk"
+                                            id="styled-checkbox-4"
+                                            type="checkbox"
+                                            v-model="checkedProduct"
+                                            value=" TrainingGuard"
+                                    />
+                                    <label for="styled-checkbox-4">TrainingGuard</label>
+                                </div>
+
+                                <!-- <div class="d-flex align-items-center">
+                                  <input type="checkbox" name="" id="" />
+                                  <span class="pl-3">Image Guard</span>
+                                </div>
+                                <div class="d-flex align-items-center ml-4">
+                                  <input type="checkbox" name="" id="" />
+                                  <div class="pl-3">Corp Guard</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                  <input type="checkbox" name="" id="" />
+                                  <div class="pl-3">Chat Guard</div>
+                                </div>
+                                <div class="d-flex align-items-center ml-4">
+                                  <input type="checkbox" name="" id="" />
+                                  <div class="pl-3">Training</div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="request-button" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

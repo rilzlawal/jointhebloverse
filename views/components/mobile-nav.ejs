@@ -1,0 +1,28 @@
+<div class="mobile-nav">
+      <span>
+          <% if (title == 'about') { %>
+
+              <a href="/"
+              ><img
+                          src="images/icons/IconLogo.svg"
+                          alt="logo"
+                          class="main-logo"
+                          id="main-logo"
+                  /><span class="text-white">DeepView</span>
+              </a>
+          <% } %>
+          <% if (title == 'index') { %>
+              ><img
+                      alt="logo"
+                      class="main-logo"
+                      id="main-logo"
+                      src="images/icons/IconLogo.svg"
+              /><span class="text-white">DeepView</span>
+          <% } %>
+      </span>
+    <img
+            class="open-side-bar-button"
+            onclick="openNav()"
+            src="images/icons/menu.svg"
+    />
+</div>
